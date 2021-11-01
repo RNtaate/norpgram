@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {useAuth} from '../context/AuthContext';
 
 const Signup = () => {
@@ -13,6 +13,7 @@ const Signup = () => {
 
   let [error, setError] = useState('');
   let [loading, setLoading] = useState(false);
+  let history = useHistory();
 
   let handleSignup = async (e) => {
     e.preventDefault();
@@ -26,6 +27,7 @@ const Signup = () => {
     try {
       setError("");
       await signup(emailRef.current.value, passwordRef.current.value)
+      history.push("/");
     }catch{
        setError("Failed to create new user");
     }finally {

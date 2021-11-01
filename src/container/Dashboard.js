@@ -27,7 +27,7 @@ const Dashboard = () => {
           <h2 className="text-center mb-4">Dashboard</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email: </strong>{currentUser.email}
-          <Link to="/updateprofile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
+          <Link to="/update_profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
         </Card.Body>
       </Card>
       <div className="mt-2 text-center w-100">

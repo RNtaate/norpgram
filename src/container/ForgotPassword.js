@@ -3,27 +3,27 @@ import { Card, Form, Button, Alert } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import {useAuth} from '../context/AuthContext';
 
-const Login = () => {
+const ForgotPassword = () => {
 
   let emailRef = useRef();
-  let passwordRef = useRef();
 
-  let {login} = useAuth();
+  let {resetPassword} = useAuth();
 
   let [error, setError] = useState('');
+  let [message, setMessage] = useState('');
   let [loading, setLoading] = useState(false);
-  let history = useHistory();
 
   let handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
+      setMessage('');
       setError("");
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push('/');
+      await resetPassword(emailRef.current.value);
+      setMessage('Check your inbox for further instructions');
     }catch{
-       setError("Failed to Log in");
+       setError("Failed to reset password, Please check your email and internet and try again later");
     }finally {
       setLoading(false);
     }
@@ -33,20 +33,18 @@ const Login = () => {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h2 className="text-center mb-4">Password Reset</h2>
           {error && <Alert variant="danger">{error}</Alert>}
+          {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleLogin}>
             <Form.Group id="email">
               <Form.Control type="email" required placeholder="Email" ref={emailRef}/>
             </Form.Group>
-            <Form.Group id="password">
-              <Form.Control type="password" required placeholder="Password" className="mt-4" ref={passwordRef}/>
-            </Form.Group>
-            <Button type="submit" className="w-100 mt-4" disabled={loading}>Log In</Button>
+            <Button type="submit" className="w-100 mt-4" disabled={loading}>Reset</Button>
           </Form>
 
           <div className="mt-3 text-center w-100">
-            <Link to="/forgot_password">Forgot Password?</Link>
+            <Link to="/login">Login</Link>
           </div>
         </Card.Body>
       </Card>
@@ -57,4 +55,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default ForgotPassword;

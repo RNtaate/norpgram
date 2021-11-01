@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import {useAuth} from '../context/AuthContext';
 
 const Signup = () => {
@@ -53,7 +54,7 @@ const Signup = () => {
         </Card.Body>
       </Card>
       <div className="mt-2 text-center w-100">
-        Already have an account? Log in
+        Already have an account? <Link to="/login">Log In</Link>
       </div>
     </>
   )

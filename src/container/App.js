@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import ForgotPassword from '../Auth/ForgotPassword';
 import UpdateProfile from '../Auth/UpdateProfile';
+import Navbar from './Navbar';
 
 function App() {
   return (
@@ -16,11 +17,9 @@ function App() {
       className="d-flex justify-content-center align-items-center"
       style={{minHeight: "100vh", position: "relative"}}
     >
-      <nav className="app-title-nav">
-        <h2 className="app-title-h2">NorpGram</h2>
-      </nav>
       <Router>
         <AuthProvider>
+          <Navbar />
           <Switch>
             <PrivateRoute exact path="/" component={Dashboard} />
             <PrivateRoute exact path="/update_profile" component={UpdateProfile} />

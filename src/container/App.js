@@ -1,13 +1,13 @@
 import './App.css';
-import Signup from './Signup';
+import Signup from '../Auth/Signup';
 import Dashboard from './Dashboard';
-import Login from './Login';
+import Login from '../Auth/Login';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from '../context/AuthContext';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
-import ForgotPassword from './ForgotPassword';
-import UpdateProfile from './UpdateProfile';
+import ForgotPassword from '../Auth/ForgotPassword';
+import UpdateProfile from '../Auth/UpdateProfile';
 
 function App() {
   return (

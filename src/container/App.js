@@ -14,21 +14,22 @@ function App() {
 
     <Container
       className="d-flex justify-content-center align-items-center"
-      style={{minHeight: "100vh"}}
+      style={{minHeight: "100vh", position: "relative"}}
     >
-      <div className="w-100" style={{maxWidth: "400px"}}>
-        <Router>
-          <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
-              <PrivateRoute exact path="/update_profile" component={UpdateProfile} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/forgot_password" component={ForgotPassword} />
-            </Switch>
-          </AuthProvider>
-        </Router>
-      </div>
+      <nav className="app-title-nav">
+        <h2 className="app-title-h2">NorpGram</h2>
+      </nav>
+      <Router>
+        <AuthProvider>
+          <Switch>
+            <PrivateRoute exact path="/" component={Dashboard} />
+            <PrivateRoute exact path="/update_profile" component={UpdateProfile} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/forgot_password" component={ForgotPassword} />
+          </Switch>
+        </AuthProvider>
+      </Router>
     </Container>
   );
 }

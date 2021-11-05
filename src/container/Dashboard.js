@@ -21,7 +21,7 @@ const Dashboard = () => {
   }
 
   return (
-    <>
+    <div className="w-100" style={{maxWidth: "400px"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Dashboard</h2>
@@ -33,7 +33,7 @@ const Dashboard = () => {
       <div className="mt-2 text-center w-100">
         <Button variant="link" onClick={handleLogout}>Log Out</Button>
       </div>
-    </>
+    </div>
   )
 }
 

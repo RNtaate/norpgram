@@ -30,7 +30,7 @@ const Login = () => {
   }
 
   return (
-    <>
+    <div className="w-100" style={{maxWidth: "400px"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -53,7 +53,7 @@ const Login = () => {
       <div className="mt-2 text-center w-100">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   )
 }
 

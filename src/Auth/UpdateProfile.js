@@ -47,7 +47,7 @@ const UpdateProfile = () => {
   }
 
   return (
-    <>
+    <div className="w-100" style={{maxWidth: "400px"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Update Profile</h2>
@@ -72,7 +72,7 @@ const UpdateProfile = () => {
       <div className="mt-2 text-center w-100">
         <Link to="/">Cancel</Link>
       </div>
-    </>
+    </div>
   )
 }
 

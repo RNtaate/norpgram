@@ -30,7 +30,7 @@ const ForgotPassword = () => {
   }
 
   return (
-    <>
+    <div className="w-100" style={{maxWidth: "400px"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Password Reset</h2>
@@ -51,7 +51,7 @@ const ForgotPassword = () => {
       <div className="mt-2 text-center w-100">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   )
 }
 

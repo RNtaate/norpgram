@@ -21,10 +21,11 @@ const Navbar = () => {
       <nav 
         className="d-flex justify-content-between align-items-center"
       >
-        <h2 className="app-title-h2 text-secondary">NorpGram</h2>
+        <h2 className="app-title-h2">NorpGram</h2>
         {
           currentUser &&
           <div className="text-secondary">
+            <strong>Hi, </strong>
             {currentUser.email}
             <Button size="sm" variant="outline-dark" className="ml-3" onClick={handleLogout}>Log Out</Button>
           </div>

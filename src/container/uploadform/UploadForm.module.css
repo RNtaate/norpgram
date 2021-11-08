@@ -18,3 +18,8 @@
   align-items: center;
   border-radius: 50%;
 }
+
+.image_label > span:hover {
+  background-color: #efb6b2;
+  color: white;
+}

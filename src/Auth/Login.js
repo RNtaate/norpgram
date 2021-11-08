@@ -24,8 +24,7 @@ const Login = () => {
       history.push('/');
     }catch{
        setError("Failed to Log in");
-    }finally {
-      setLoading(false);
+       setLoading(false);
     }
   }
 

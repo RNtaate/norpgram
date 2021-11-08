@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, Button, Alert } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import UploadForm from './uploadform/UploadForm';
 
 const Dashboard = () => {
 
@@ -29,6 +30,7 @@ const Dashboard = () => {
         className="text-secondary"
         style={{letterSpacing: "1px"}}
       >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <UploadForm />
     </div>
   )
 }

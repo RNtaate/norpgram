@@ -1,0 +1,9 @@
+.image_input {
+  display: none;
+}
+
+.image_label {
+  font-size: 30px;
+  color: #efb6b2;
+  cursor: pointer;
+}

@@ -38,3 +38,8 @@
   font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
 }
+
+.progress-bar-div {
+  background-color: #efb6b2;
+  height: 5px;
+}

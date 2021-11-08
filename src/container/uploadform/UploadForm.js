@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import * as styles from './UploadForm.module.css';
+import ProgressBar from './ProgressBar';
 
 const UploadForm = () => {
 
@@ -35,6 +36,7 @@ const UploadForm = () => {
           {file && <p className="text-info">{file.name}</p>}
         </div>
       </form>
+      {file && <ProgressBar file={file} setFile={setFile}/> }
     </div>
   )
 }

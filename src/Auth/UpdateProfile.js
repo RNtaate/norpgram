@@ -47,7 +47,7 @@ const UpdateProfile = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px"}}>
+    <div className="w-100" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Update Profile</h2>

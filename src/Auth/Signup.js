@@ -36,7 +36,7 @@ const Signup = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px"}}>
+    <div className="w-100" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
@@ -51,7 +51,7 @@ const Signup = () => {
             <Form.Group id="password-confirm">
               <Form.Control type="password" required placeholder="Password Confirm" ref={passwordConfirmRef}/>
             </Form.Group>
-            <Button type="submit" className="w-100 mt-4" disabled={loading}>Sign Up</Button>
+            <Button type="submit" className="w-100 mt-4" disabled={loading} variant="secondary">Sign Up</Button>
           </Form>
         </Card.Body>
       </Card>

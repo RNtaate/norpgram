@@ -30,7 +30,7 @@ const Login = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px"}}>
+    <div className="w-100" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -42,7 +42,7 @@ const Login = () => {
             <Form.Group id="password">
               <Form.Control type="password" required placeholder="Password" className="mt-4" ref={passwordRef}/>
             </Form.Group>
-            <Button type="submit" className="w-100 mt-4" disabled={loading}>Log In</Button>
+            <Button type="submit" className="w-100 mt-4" disabled={loading} variant="secondary">Log In</Button>
           </Form>
 
           <div className="mt-3 text-center w-100">

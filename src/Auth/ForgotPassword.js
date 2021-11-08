@@ -30,7 +30,7 @@ const ForgotPassword = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px"}}>
+    <div className="w-100" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Password Reset</h2>
@@ -40,7 +40,7 @@ const ForgotPassword = () => {
             <Form.Group id="email">
               <Form.Control type="email" required placeholder="Email" ref={emailRef}/>
             </Form.Group>
-            <Button type="submit" className="w-100 mt-4" disabled={loading}>Reset</Button>
+            <Button type="submit" className="w-100 mt-4" disabled={loading} variant="secondary">Reset</Button>
           </Form>
 
           <div className="mt-3 text-center w-100">

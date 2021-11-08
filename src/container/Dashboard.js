@@ -21,18 +21,14 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px"}}>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Dashboard</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <strong>Email: </strong>{currentUser.email}
-          <Link to="/update_profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
-        </Card.Body>
-      </Card>
-      <div className="mt-2 text-center w-100">
-        <Button variant="link" onClick={handleLogout}>Log Out</Button>
-      </div>
+    <div 
+      className="w-100 dashboard-div d-flex flex-column align-items-center"
+    >
+      <h2 className="dashboard-heading mb-4">Current Pictures</h2>
+      <p 
+        className="text-secondary"
+        style={{letterSpacing: "1px"}}
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
   )
 }

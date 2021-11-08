@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *,
 *::after,
 *::before {
@@ -8,8 +10,31 @@
   margin: 0;
 }
 
+:root {
+  --originalFont: 'Noto Serif', serif;
+}
+
 .app-title-header {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: var(--originalFont);
+}
+
+.app-title-h2 {
+  color: #efb6b2;
+  font-size: 1.8em;
+}
+
+.dashboard-div {
+  min-height: inherit;
+  max-height: 100vh;
+  padding-top: 10%;
+  font-family: var(--originalFont);
+}
+
+.dashboard-heading {
+  font-size: 3em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
 }

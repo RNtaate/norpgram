@@ -28,7 +28,7 @@ const UploadForm = () => {
       <form className="d-flex flex-column align-items-center">
         <input type="file" accept="image/*" id="image-file" onChange={handleImageChange} className={styles.image_input}/>
         <label htmlFor="image-file" className={styles.image_label}>
-          <i className="fas fa-plus-circle"></i>
+          <span>+</span>
         </label>
         <div>
           {error && <Alert variant="danger" size="sm">{error}</Alert>}

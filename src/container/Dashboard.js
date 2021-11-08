@@ -3,6 +3,7 @@ import { Card, Button, Alert } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import UploadForm from './uploadform/UploadForm';
+import ImageGrid from './ImageGrid';
 
 const Dashboard = () => {
 
@@ -31,6 +32,7 @@ const Dashboard = () => {
         style={{letterSpacing: "1px"}}
       >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <UploadForm />
+      <ImageGrid />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useStorage from '../hooks/useStorage';
 import { useAuth } from '../../context/AuthContext';
+import { motion } from 'framer-motion';
 
 const ProgressBar = ({file, setFile}) => {
 
@@ -16,11 +17,12 @@ const ProgressBar = ({file, setFile}) => {
     }, [imageUrl])
 
   return (
-    <div
+    <motion.div
       className="progress-bar-div d-flex flex-column justify-content-center"
-      style={{width: progress + "%"}}
+      initial={{width: 0}}
+      animate={{width: progress + "%"}}
     >
-    </div>
+    </motion.div>
   )
 }
 

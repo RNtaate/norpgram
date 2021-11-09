@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import UploadForm from './uploadform/UploadForm';
 import ImageGrid from './ImageGrid';
+import Modal from './Modal';
 
 const Dashboard = () => {
+
+  let [selectedImg, setSelectedImg] = useState(null);
 
   return (
     <div 
@@ -14,7 +17,8 @@ const Dashboard = () => {
         style={{letterSpacing: "1px"}}
       >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <UploadForm />
-      <ImageGrid />
+      <ImageGrid setSelectedImg={setSelectedImg}/>
+      {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/> }
     </div>
   )
 }

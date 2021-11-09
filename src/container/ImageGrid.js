@@ -2,7 +2,7 @@ import React from 'react';
 import useFirestore from './hooks/useFirestore';
 import { useAuth } from '../context/AuthContext';
 
-const ImageGrid = () => {
+const ImageGrid = ({ setSelectedImg }) => {
 
   let { currentUser } = useAuth();
   let { docs } = useFirestore("images", currentUser);
@@ -12,7 +12,7 @@ const ImageGrid = () => {
     <div className="img-grid-wrapper">
       {docs && docs.map( doc => {
         return (
-          <div className="img-wrapper" key={doc.id}>
+          <div className="img-wrapper" key={doc.id} onClick={() => setSelectedImg(doc.imageUrl)}>
             <img src={doc.imageUrl} alt="Nice Image"/>
           </div>
         )

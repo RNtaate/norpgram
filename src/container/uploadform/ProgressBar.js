@@ -17,7 +17,7 @@ const ProgressBar = ({file, setFile}) => {
 
   return (
     <div
-      className="progress-bar-div"
+      className="progress-bar-div d-flex flex-column justify-content-center"
       style={{width: progress + "%"}}
     >
     </div>

@@ -12,7 +12,7 @@ const ImageGrid = () => {
     <div className="img-grid-wrapper">
       {docs && docs.map( doc => {
         return (
-          <div className="img-wrapper bg-success" key={doc.id}>
+          <div className="img-wrapper" key={doc.id}>
             <img src={doc.imageUrl} alt="Nice Image"/>
           </div>
         )

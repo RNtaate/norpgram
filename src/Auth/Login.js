@@ -29,10 +29,10 @@ const Login = () => {
   }
 
   return (
-    <div className="w-100" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
-      <Card>
+    <div className="w-100 auth-form-div" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
+      <Card className="auth-form-card">
         <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h2 className="text-center mb-4 text-secondary">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleLogin}>
             <Form.Group id="email">
@@ -49,7 +49,7 @@ const Login = () => {
           </div>
         </Card.Body>
       </Card>
-      <div className="mt-2 text-center w-100">
+      <div className="mt-2 text-center w-100 text-secondary">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
     </div>

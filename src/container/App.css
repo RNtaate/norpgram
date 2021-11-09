@@ -50,8 +50,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
+  justify-items: center;
+  margin: 40px auto;
   width: 100%;
 }
 

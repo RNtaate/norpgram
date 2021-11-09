@@ -14,10 +14,10 @@ function App() {
   return (
 
     <div
-      className="d-flex justify-content-center align-items-center"
+      className="d-flex align-items-center flex-column"
       style={{
         minHeight: "100vh",
-        position: "relative",
+        // position: "relative",
         maxWidth: "75%",
         width: "75%",
         margin: "0 auto"

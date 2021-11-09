@@ -31,12 +31,19 @@ const UploadForm = () => {
         <label htmlFor="image-file" className={styles.image_label}>
           <span>+</span>
         </label>
-        <div>
+        <div
+          style={{minHeight: "25px", maxHeight: "20px"}}
+        >
           {error && <Alert variant="danger" size="sm">{error}</Alert>}
           {file && <p className="text-info">{file.name}</p>}
         </div>
       </form>
-      {file && <ProgressBar file={file} setFile={setFile}/> }
+      <div
+        className="d-flex flex-column justify-content-center"
+        style={{minHeight: "5px", maxHeight: "5px"}}
+      >
+        {file && <ProgressBar file={file} setFile={setFile}/>}
+      </div>
     </div>
   )
 }

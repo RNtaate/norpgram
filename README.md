@@ -1,8 +1,14 @@
 # NorpGram
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa27b8d5-8f20-4b4c-811e-f30a0e7ba5b7/deploy-status)](https://app.netlify.com/sites/norp-gram/deploys)
-
 [![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)]()
+
+##  🔧 Built with
+
+- ReactJS
+- Yarn
+- [Firebase](https://firebase.google.com/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
 
 ## 🔴 Live Demo
 
@@ -19,3 +25,4 @@
 ## Acknowledgements
 
 - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+- [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)

@@ -36,10 +36,10 @@ const Signup = () => {
   }
 
   return (
-    <>
-      <Card>
+    <div className="w-100 auth-form-div" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
+      <Card className="auth-form-card">
         <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+          <h2 className="text-center mb-4 text-secondary">Sign Up</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSignup}>
             <Form.Group id="email">
@@ -51,14 +51,14 @@ const Signup = () => {
             <Form.Group id="password-confirm">
               <Form.Control type="password" required placeholder="Password Confirm" ref={passwordConfirmRef}/>
             </Form.Group>
-            <Button type="submit" className="w-100 mt-4" disabled={loading}>Sign Up</Button>
+            <Button type="submit" className="w-100 mt-4" disabled={loading} variant="secondary">Sign Up</Button>
           </Form>
         </Card.Body>
       </Card>
-      <div className="mt-2 text-center w-100">
+      <div className="mt-2 text-center w-100 text-secondary">
         Already have an account? <Link to="/login">Log In</Link>
       </div>
-    </>
+    </div>
   )
 }
 

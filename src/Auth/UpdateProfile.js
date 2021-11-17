@@ -47,8 +47,8 @@ const UpdateProfile = () => {
   }
 
   return (
-    <>
-      <Card>
+    <div className="w-100 auth-form-div" style={{maxWidth: "400px", fontFamily: "'Noto Serif', serif"}}>
+      <Card className="auth-form-card">
         <Card.Body>
           <h2 className="text-center mb-4">Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
@@ -72,7 +72,7 @@ const UpdateProfile = () => {
       <div className="mt-2 text-center w-100">
         <Link to="/">Cancel</Link>
       </div>
-    </>
+    </div>
   )
 }
 

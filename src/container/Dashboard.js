@@ -1,39 +1,25 @@
 import React, { useState } from 'react'
-import { Card, Button, Alert } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import UploadForm from './uploadform/UploadForm';
+import ImageGrid from './ImageGrid';
+import Modal from './Modal';
 
 const Dashboard = () => {
 
-  let [error, setError] = useState('');
-  let {currentUser, logout} = useAuth();
-  let history = useHistory();
-
-  let handleLogout = async () => {
-    setError('')
-
-    try {
-      await logout();
-      history.push('/login');
-    }catch {
-      setError('Failed to log out.');
-    }
-  }
+  let [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Dashboard</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <strong>Email: </strong>{currentUser.email}
-          <Link to="/update_profile" className="btn btn-primary w-100 mt-3">Update Profile</Link>
-        </Card.Body>
-      </Card>
-      <div className="mt-2 text-center w-100">
-        <Button variant="link" onClick={handleLogout}>Log Out</Button>
-      </div>
-    </>
+    <div 
+      className="w-100 dashboard-div d-flex flex-column align-items-center"
+    >
+      <h2 className="dashboard-heading mb-4">Current Pictures</h2>
+      <p 
+        className="text-secondary"
+        style={{letterSpacing: "1px"}}
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <UploadForm />
+      <ImageGrid setSelectedImg={setSelectedImg}/>
+      {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/> }
+    </div>
   )
 }
 

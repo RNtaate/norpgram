@@ -1,0 +1,25 @@
+.image_input {
+  display: none;
+}
+
+.image_label {
+  font-size: 30px;
+  color: #efb6b2;
+  cursor: pointer;
+}
+
+.image_label > span {
+  border: 2px solid #efb6b2;
+  width: 15px;
+  height: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.image_label > span:hover {
+  background-color: #efb6b2;
+  color: white;
+}

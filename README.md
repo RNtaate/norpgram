@@ -55,7 +55,7 @@
 1. Run `npm start` or `yarn start` to start the application on a local server
 
 #### Note: 
-> Create `environment variables` corresponding with the variable names in src/firebase/firebase.config.js before building and running the application.
+> Create the `environment variables` corresponding with the variable names in **src/firebase/firebase.config.js** file before building and running the application.
 
 ## 🤝 Contributions
   There are two ways of contributing to this project:

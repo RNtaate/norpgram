@@ -5,11 +5,26 @@
 
 ## Project Description
 
-> - __Coming Soon__
+> This project is an image uploading and sharing Single Page Application(SPA) built using React JS and Firebase.
+
+> It is built to display and demonstrate my unnderstanding of **Firebase**, **Firebase-Authentication**, and **Firebase-Storage**.
+
+> It allows a user to __Sign Up__ and __Login__, upload an image of their choice, and view other images uploaded by other users.
+
+> #### Future Features:
+> - Writing a message along with an uploaded image
+> - Viewing the user that uploaded a specific image
+> - Commenting on and liking an uploaded image.
 
 ### Screenshots
 
-- **Coming soon**
+|Login Page|Signup Page
+|-|-|
+|![](/public/screenshot1.png)|![](/public/screenshot2.png)
+
+|Dashboard Page|Image View
+|-|-|
+![](/public/screenshot3.png)|![](/public/screenshot4.png)
 
 ##  🔧 Built with
 
@@ -24,13 +39,38 @@
 
 ## Get started
 ### Prerequisites
-- Coming Soon
+- Node Package Manager(npm) __OR__ Yarn
+- Node
+- [Firebase](https://firebase.google.com/) Account
 
 ### Steps to follow
-- Coming soon
+1. Clone the repository to your local machine by running `git clone git@github.com:RNtaate/norpgram.git` in your terminal
+
+1. On your local machine, navigate to the project folder using `cd norpgram` in your terminal
+
+1. Run `npm install` or `yarn install` to install all the necessary dependencies.
+
+1. Run `npm run build` or `yarn run build`
+
+1. Run `npm start` or `yarn start` to start the application on a local server
+
+#### Note: 
+> Create the `environment variables` corresponding with the variable names in **src/firebase/firebase.config.js** file before building and running the application.
 
 ## 🤝 Contributions
-- __Coming Soon__
+  There are two ways of contributing to this project:
+
+1. If you see something wrong or not working, please check [the issue tracker section](https://github.com/RNtaate/norpgram/issues), if that problem you met is not in already opened issues then open the issue by clicking on `new issue` button.
+
+2. If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
+    1.  Fork this repository
+
+    1.  Clone it on your local computer by running `git clone git@github.com:RNtaate/norpgram.git` __Replace *RNtaate* with the username you use on github__
+    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1.  Create a separate branch off the *master branch* or *main branch*,
+    1.  Write your codes which fix the issue you found
+    1.  Commit and push the branch you created
+    1.  Raise a pull request, comparing your new created branch with our default branch [here](https://github.com/RNtaate/norpgram)
 
 ## ✒️  Authors
 
